@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="http://entel.github.com/blog/css/article.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/ram_color.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://entel.github.io/blog/js/syntaxhighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="../js/syntaxhighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://entel.github.io/blog/js/syntaxhighlighter/styles/shThemeDefault.css" id="shTheme"/>
+	<link type="text/css" rel="stylesheet" href="http://entel.github.com/blog/css/buling.css" />
+	<script type="text/javascript" src="http://entel.github.io/blog/js/syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="http://entel.github.io/blog/js/syntaxhighlighter/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="http://entel.github.io/blog/js/syntaxhighlighter/scripts/shBrushPython.js"></script>
+	<script type='text/javascript'>
+		SyntaxHighlighter.config.bloggerMode = true;
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+	a:link {text-decoration: none;}
+	a:visited {text-decoration: none;}
+	a:active {text-decoration: none;}
+	a:hover {text-decoration: none;}
+	</style> 
+	<title>{{ page.title }}</title>
+</head>
+<body>
+	<div id="main">
+<!--	<div id="top">
+		<h4>Category</h4>
+		<ul id="diary_type">
+		    {% for category in site.categories %}
+			<li><a href="/categories/{{ category | first }}/" title="view all6posts">{{ category | first }} ({{ category | last | size }})</a>
+		    	</li>
+		    {% endfor %}
+		</ul>
+		<ul id="diarys" >
+		　　{% for post in site.posts %}
+		　　　　<li id="diary" >{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		　　{% endfor %}
+		</ul>
+	</div>	-->
+		<div id="show">	
+			<h2><a href="http://entel.github.com/blog/view/ini.html">This is me !!!</a>
+				<font color="#778899" size="33"><strong>>></strong></font>
+				<a href="/categories/{\{ page.categories | first }\}/">{{ page.categories }}</a>
+			</h2>
+			<h3>{{ page.title }}</h3>
+			<div id="date">{{ page.date | date_to_string }}</div>
+			<div id="article">{{ content }}</div>
+		</div>
+
+		<div id="tmp_menu">
+			<br />
+			Yah, sorry, there is some problems occur to this function.<br />
+			呀，实在不好意思。。。这个功能出了点问题。。。我正在努力调试中。。。<br />
+		</div>
+	
+		<div id="menu">
+			<a  class="menuli"><img src="http://entel.github.com/blog/img/page.ico" class="menu_list" /></a>
+			<a  class="menuli"><img src="http://entel.github.com/blog/img/photos.ico" class="menu_list" /></a>
+			<a  class="menuli"><img src="http://entel.github.com/blog/img/newspaper.ico" class="menu_list" /></a>
+		</div>
+	</div>
+	<br /><br /><br /><br />
+</body>
+	<script language="javascript" type="text/javascript" src="http://entel.github.io/blog/js/tmp_menu.js"></script>
+</html>

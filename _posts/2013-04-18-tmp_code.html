@@ -1,0 +1,63 @@
+---
+layout: article
+title: ‘字符画’
+---
+<pre class="brush: python;">
+
+# -*- coding:utf8 -*-
+
+import sys
+import os
+import Image
+import ImageFont
+import ImageDraw
+
+HEIGHT = 100
+chars = " .:/\|o0oooooooooo0000000000OOOOOOOOOOO"
+
+def pic2ascii(filename):
+    output = ''
+    image = Image.open(filename)
+    size = getsize(image)
+    image = image.resize(size)
+    image = image.convert('L')
+    pixs = image.load()
+    for y in range(size[1]):
+        for x in range(size[0]):
+            output += chars[pixs[x,y]/40] # unindented this
+        output += '\n'
+    f1 = open('out.txt','w')
+    f1.write(output)
+
+    '''tranform text to pic'''
+    '''im = Image.new("RGB", (size[1], size[0]), (255, 255, 255))
+    dr = ImageDraw.Draw(im)
+    font = ImageFont.truetype(os.path.join("fonts", "simsun.ttc"), 18)
+    for each_line in f1:
+  	  dr.text((10, 5), each_line, font=font, fill="#000000")
+    im.show()
+    im.save("out.png")
+    '''
+    f1.close()
+
+def getsize(image):
+    '''Calculate the target picture size
+    '''
+    s_width = image.size[0]
+    s_height = image.size[1]
+    t_height = HEIGHT
+    t_width = (t_height*s_width)/s_height
+    t_width = int(t_width * 2.3)
+    t_size = (t_width ,t_height)
+    return t_size
+
+'''if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print "Useage: pic2ascii.py filename"
+        sys.exit(1)
+    filename = sys.argv[1]'''
+pic2ascii("1.jpg")
+</pre>
+
+<p>帆布，这是我的代码。。。
+</p>

@@ -1,0 +1,437 @@
+---
+layout: buling
+title: '卜灵测试——jquery学习初试'
+---
+<!--	<script src="http://entel.github.com/blog/js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/buling.css" />-->
+	<div id="bu_main">
+	<div id="intr">
+		<div id="head1">测试你的卜灵</div>
+		<div id="head2"><p style="text-indent: 2em;">卜灵在本质上是自我心灵的一部分，是另一个“我”。但实际上它又像是存在于自己心中的另一个人，有它自己的性格，情绪和思维方式。没有遭遇大的变故的话，很长的一段时间内卜灵都会与心灵一样保持稳定状态，不会发生什么变化。</div>
+		<div id="head2"><p style="text-indent: 2em;">我们可以给卜灵划分种类，并以每张大阿卡纳（塔罗牌的主牌）命名一类卜灵。想看看自己卜灵的种类吗？通过下面一套测试题就能得知你的卜灵种类。</div>
+		<button id="start">Start</button>
+	</div>
+	
+	<div id="qr">
+		<div class="question"  id="q1">
+			1.你总是在思考后才会行动？ </br>
+			<input type="radio" value="q2" name="q1" />是 </br>
+			<input type="radio" value="q3" name="q1" />否
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q2">
+			2.你是经常会按照计划行事的吗？ </br>
+			<input type="radio" value="q4" name="q2" />是 </br>
+			<input type="radio" value="q5" name="q2" />否 
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q3">
+			3.你会经常陷入回忆之中吗？ </br>
+			<input type="radio" value="q6" name="q3" />是 </br>
+			<input type="radio" value="q7" name="q3" />否
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q4">
+			4.你认为经验比理论更可靠吗？ </br>
+			<input type="radio" value="q8" name="q4" />是 </br>
+			<input type="radio" value="q9" name="q4" />否 
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q5">
+			5.你会经常凭直觉行动吗？ </br>
+			<input type="radio" value="q10" name="q5" />是 </br>
+			<input type="radio" value="q11" name="q5" />否 
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q6">
+			6.你认为世界时美好的吗？ </br>
+			<input type="radio" value="q12" name="q6" />是 </br>
+			<input type="radio" value="q13" name="q6" />否
+		</br><button class="next">Next Question</button></div>
+		
+		<div class="question"  id="q7">
+			7.你对未来很好奇并经常猜测未来会发生什么吗？ </br>
+			<input type="radio" value="q14" name="q7" />是 </br> 
+			<input type="radio" value="q15" name="q7" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q8">
+			8.你会认为多数人的经验比自己的经验更可靠吗？ </br>
+			<input type="radio" value="q18" name="q8" />是 </br> 
+			<input type="radio" value="q16" name="q8" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q9">
+			9.你认为神秘的超自然力量有可能存在吗？ </br>
+			<input type="radio" value="q20" name="q9" />是 </br> 
+			<input type="radio" value="q16" name="q9" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q10">
+			10.你的情绪会经常起伏变化甚至失控吗？ </br>
+			<input type="radio" value="q6" name="q10" />是</br>
+			<input type="radio" value="q14" name="q10" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q11">
+			11.如果让你在拥有一技之长和一辈子都事事顺利之间选择，你会选择一技之长吗？ </br>
+			<input type="radio" value="q22" name="q11" />是 </br> 
+			<input type="radio" value="q23" name="q11" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q12">
+			12.你经常会同情别人并帮助他人吗？ </br>
+			<input type="radio" value="q24" name="q12" />是 </br> 
+			<input type="radio" value="q17" name="q12" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q13">
+			13.你认为你的不幸是个人原因而不是社会造成的？ </br>
+			<input type="radio" value="q27" name="q13" />是 </br> 
+			<input type="radio" value="q17" name="q13" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q14">
+			14.你完全相信甚至痴迷于命运与魔法吗？ </br>
+			<input type="radio" value="q28" name="q14" />是 </br> 
+			<input type="radio" value="q29" name="q14" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q15">
+			15.你认为推理比直觉更可靠吗？ </br>
+			<input type="radio" value="q4" name="q15" />是 </br> 
+			<input type="radio" value="q11" name="q15" />否  		
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q16">
+			16.你会相信奇迹发生吗？ </br>
+			<input type="radio" value="q19" name="q16" />是 </br> 
+			<input type="radio" value="q21" name="q16" />否  		
+		</br><button class="next">Next Question</button></div>
+		
+		<div class="question"  id="q17">
+			17.你总是对未来抱有希望，总是很乐观吗？ </br>
+			<input type="radio" value="q25" name="q17" />是 </br> 
+			<input type="radio" value="q26" name="q17" />否  		
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q18">
+			18.你看见一个有前科的人鬼鬼祟祟，但不确定他在做什么，你会断定他在做坏事吗？ </br>
+			<input type="radio" value="a" name="q18" />是 </br> 
+			<input type="radio" value="b" name="q18" />否  		
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q19">
+			19.你认为自己还算有能力吗？ </br>
+			<input type="radio" value="c" name="q19" />是 </br> 
+			<input type="radio" value="d" name="q19" />否  		
+			</br><button class="next">Next Question</button>
+		</div>		
+		
+		<div class="question"  id="q20">
+			20.你认为情理和道德比法律更重要吗？ </br>
+			<input type="radio" value="e" name="q20" />是 </br> 
+			<input type="radio" value="f" name="q20" />否  		
+			</br><button class="next">Next Question</button>
+		</div>	
+		
+		<div class="question"  id="q21">
+			21.你认为科学史可以解释一切的吗？ </br>
+			<input type="radio" value="g" name="q21" />是 </br> 
+			<input type="radio" value="h" name="q21" />否  		
+			</br><button class="next">Next Question</button>
+		</div>	
+		
+		<div class="question"  id="q22">
+			22.你经常有自豪感和优越感吗？ </br>
+			<input type="radio" value="i" name="q22" />是 </br> 
+			<input type="radio" value="j" name="q22" />否  		
+			</br><button class="next">Next Question</button>
+		</div>	
+		
+		<div class="question"  id="q23">
+			23.在旅游的时候你会急着到达山顶而不是漫步欣赏全部风景吗？ </br>
+			<input type="radio" value="k" name="q23" />是 </br> 
+			<input type="radio" value="l" name="q23" />否  		
+			</br><button class="next">Next Question</button>
+		</div>	
+		
+		<div class="question"  id="q24">
+			24.你会经常有种使命感或责任感一定要去做什么吗？ </br>
+			<input type="radio" value="m" name="q24" />是 </br> 
+			<input type="radio" value="n" name="q24" />否  		
+			</br><button class="next">Next Question</button>
+		</div>		
+		
+		<div class="question"  id="q25">
+			25.在两难的处境下你能果断做出选择吗？ </br>
+			<input type="radio" value="o" name="q25" />是 </br> 
+			<input type="radio" value="p" name="q25" />否  		
+			</br><button class="next">Next Question</button>
+		</div>		
+		
+		<div class="question"  id="q26">
+			26.你认为别人可信可靠吗？ </br>
+			<input type="radio" value="q" name="q26" />是 </br> 
+			<input type="radio" value="r" name="q26" />否  		
+			</br><button class="next">Next Question</button>	
+		</div>	
+		
+		<div class="question"  id="q27">
+			27.面对绝望的环境，你会选择逃避和放纵而不是努力改造吗？ </br>
+			<input type="radio" value="s" name="q27" />是 </br> 
+			<input type="radio" value="t" name="q27" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q28">
+			28.你认为一切都是注定的，人对命运无能为力吗？ </br>
+			<input type="radio" value="v" name="q28" />是 </br> 
+			<input type="radio" value="w" name="q28" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="question"  id="q29">
+			29.你会经常准确感觉到未来的状况吗？ </br>
+			<input type="radio" value="x" name="q29" />是 </br> 
+			<input type="radio" value="y" name="q29" />否  
+			</br><button class="next">Next Question</button>
+		</div>
+		
+		<div class="result" id="a">
+			<img src="http://entel.github.com/blog/img/Tarot/a.jpg" />
+			<div class="result_title">审判</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是刻板的经验主义者。</div>
+			<div class="result2"><p style="text-indent: 2em;">在占卜的时候往往会联想到以前的占卜，并将以前的占卜结果作为此次占卜的依据。拥有此类卜灵的初学者往往会一边查书一边解读，几乎完全套用书上的原话。这种卜灵解读很谨慎，一般情况下不会出现太大偏差，准确率稳定。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是长辈指导型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>你应该。。。。。。</div>
+		</div>
+		
+		<div class="result" id="b">
+			<img src="http://entel.github.com/blog/img/Tarot/b.jpg" />
+			<div class="result_title">节制</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常理智，充满了理性，并且自制力比较强。</div>
+			<div class="result2"><p style="text-indent: 2em;">擅长运用理论知识结合实际情况分析进行占卜，逻辑思维能力非常强，考虑周到。执行计划能力和对局势的控制力突出。占卜通常会有条不紊地进行，占卜时双方都很少会出现情绪波动。但是这类卜灵容易缺乏想象力和创造力。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是朋友探讨型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>可能是。。。。。。</div>
+		</div>
+		
+		<div class="result" id="c">
+			<img src="http://entel.github.com/blog/img/Tarot/c.jpg" />
+			<div class="result_title">力量</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常果断，敢作敢当，有自信。</div>
+			<div class="result2"><p style="text-indent: 2em;">平易近人，占卜时很容易就能给问卜者信赖感，常常会与问卜者成为朋友。经常会用论断性语气解读塔罗，而且对自己占卜的结果非常有自信。有的时候听不进问卜者的解释，固执己见。占卜的准确率起伏比较大。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是粉丝支持型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。对你来说没什么。。。。。。</div>
+		</div>
+		
+		<div class="result" id="d">
+			<img src="http://entel.github.com/blog/img/Tarot/d.jpg" />
+			<div class="result_title">倒吊人</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵善于反思，能快速成长。</div>
+			<div class="result2"><p style="text-indent: 2em;">这是学习型的卜灵。能虚心接受别人指出自己的不足和错误并很快改正，进步很快。擅长通过与问卜者交流进行占卜。很容易对问卜者敞开心扉，经常以自己的内心和过往开导问卜者。擅长获取信息，只是缺乏自信，容易迁就问卜者，甚至会被问卜者控制局势。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是朋友谈心型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>我曾经。。。。。。</div>
+		</div>
+		
+		<div class="result" id="e">
+			<img src="http://entel.github.com/blog/img/Tarot/e.jpg" />
+			<div class="result_title">皇帝</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵客观公正，善于辩论。</div>
+			<div class="result2"><p style="text-indent: 2em;">这是能给人安全感的卜灵。它善于给予事实思考得出结论，理论与经验只是参考，事实才是依据。它总会以自己认为客观公正的方式来解读塔罗，但有些时候又难免自以为是。此类卜灵占卜准确率起伏较小，但解读也会偶尔出现偏差。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式是朋友辩论型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>事实上。。。。。。</div>
+		</div>
+		
+		<div class="result" id="f">
+			<img src="http://entel.github.com/blog/img/Tarot/f.jpg" />
+			<div class="result_title">正义</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵公正守法，循规蹈矩，道德感，正义感强烈。</div>
+			<div class="result2"><p style="text-indent: 2em;">它是法律与道德的维护者，它是公平与正义的代言者。它正义感强烈，难以容忍黑暗，它因循守旧，很难创新。占卜更多的是依靠前人的经验，尤其是对历代塔罗大师的书籍和话语更加奉若神祗，此类卜灵中许多都会抱有匡扶正义，拯救弱小的理想而使用塔罗。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是师长教导型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。正确的。。。。。。</div>
+		</div>
+		
+		<div class="result" id="g">
+			<img src="http://entel.github.com/blog/img/Tarot/g.jpg" />
+			<div class="result_title">未知</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你不适合占卜，几乎感觉不到卜灵的存在。</div>
+			<div class="result2"><p style="text-indent: 2em;">此类卜灵不是真正意义上的不存在，只是被无视到相当于无的境界。这类人太理性，很难与卜灵沟通，一般很少主动接触塔罗，即使接触，也很难深入研究。所以这类人并不适合占卜。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是自言自语型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。真的吗。。。。。。</div>
+		</div>
+		
+		<div class="result" id="h">
+			<img src="http://entel.github.com/blog/img/Tarot/h.jpg" />
+			<div class="result_title">隐士</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是擅长推理的分析主义者。</div>
+			<div class="result2"><p style="text-indent: 2em;">它不擅长长篇累牍地表达，却很擅长逻辑推理，往往能够一语中的，道破天机。不过同时它也很懒惰，经常打不起精神，没有干劲儿。它不会经常占卜，且很容易放弃和逃避。一想到复杂的事就感到头痛，于是干脆就不想了。它很难对人敞开心扉。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是颓废消极型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。算了吧，无所谓。。。。。。</div>
+		</div>
+		
+		<div class="result" id="i">
+			<img src="http://entel.github.com/blog/img/Tarot/i.jpg" />
+			<div class="result_title">塔</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵具有非常强的自尊心，非常自信，有些自傲。</div>
+			<div class="result2"><p style="text-indent: 2em;">它总是想要证明自己的能力，爱表现。占卜时常常会跑题，讲到自己以前非常灵验的占卜和语言。对于问卜者对自己的怀疑会感到非常气恼。如果问卜者对其表现出信任，它便可能会超常发挥，作出异常灵验的占卜。占卜的准确率受问卜者对其态度的影响，起伏较大。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是对手挑战型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。你不行。。。。。。</div>
+		</div>
+		
+		<div class="result" id="j">
+			<img src="http://entel.github.com/blog/img/Tarot/j.jpg" />
+			<div class="result_title">战车</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵喜欢挑战和征服，追求成就感。</div>
+			<div class="result2"><p style="text-indent: 2em;">它喜欢困难和复杂的占卜，对于重复的占卜没有多少兴趣，总是喜欢新鲜的事情。占卜时也往往会更多地探讨事件的过去，费尽力气去解析一些与事件未来并没有太大关系的因素。但是它非常有能力，能很轻易地操作复杂的牌阵。准确率也非常稳定。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是朋友怂恿型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>去。。。。。。吧</div>
+		</div>
+		
+		<div class="result" id="k">
+			<img src="http://entel.github.com/blog/img/Tarot/k.jpg" />
+			<div class="result_title">太阳</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是个急性子，总是精力充沛的家伙。</div>
+			<div class="result2"><p style="text-indent: 2em;">占卜时它通常是开门见山，喜欢先从牌阵中“未来”或“结果”的位置解起。它比较适合短而精的占卜。因为它总是很活跃，又乐于助人，所以占卜的频率也比别人高。它的准确率也很不错，只是它的表达力不是很好，而且很少有耐心去详细给问卜者解释，经常自己很明白，问卜者缺什么也没听懂。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是领导催促型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>快点儿。。。。。。</div>
+		</div>
+		
+		<div class="result" id="l">
+			<img src="http://entel.github.com/blog/img/Tarot/l.jpg" />
+			<div class="result_title">世界</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是个完美主义者。</div>
+			<div class="result2"><p style="text-indent: 2em;">它难以容忍瑕疵的存在，总是追求完美。占卜中，它精益求精，往往会沉醉于解说之中，不知如何结束。对于塔罗知识的学习也是孜孜不倦，令人敬佩。只是同时它也过于苛刻，会让人无所适从。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是父母期待型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>你可以做得更好。。。。。。</div>
+		</div>
+		
+		<div class="result" id="m">
+			<img src="http://entel.github.com/blog/img/Tarot/m.jpg" />
+			<div class="result_title">教皇</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常善良，乐于助人。</div>
+			<div class="result2"><p style="text-indent: 2em;">它是非常积极主动帮助别人的类型，它无法漠视正在痛苦中挣扎的人，即使没有人向它求救，它也会主动伸出援手。它有些强迫自己，将救扶当成了自己的责任和使命。但它同时也过于体现自我，太从自我出发，总是会以自己的想法去妄自揣度他人。结果常常因此给他人造成困扰。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是朋友怂恿型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>只有你才能。。。。。。</div>
+		</div>
+		
+		<div class="result" id="n">
+			<img src="http://entel.github.com/blog/img/Tarot/n.jpg" />
+			<div class="result_title">女皇</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常有同情心，非常宽容，非常体贴。</div>
+			<div class="result2"><p style="text-indent: 2em;">它对问卜者是纯粹的同情心，就像父母对待子女一样，总是无条件地全心提供帮助，不计较得失。很多时候，在占卜结束后，还会与问卜者联系询问事态发展。它是个非常负责任的卜灵。但对于拥有这类卜灵的人来说，它又何尝不是一种负担？</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是子女依赖型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>傻孩子。。。。。。</div>
+		</div>
+		
+		<div class="result" id="o">
+			<img src="http://entel.github.com/blog/img/Tarot/o.jpg" />
+			<div class="result_title">星星</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵总是充满希望，十分乐观。</div>
+			<div class="result2"><p style="text-indent: 2em;">在占卜中非常擅长、非常乐于描述未来，即使解读的结果不顺利，也能让问卜者对未来充满勇气和希望。但这类牌灵对过去和现在不是很重视，往往会忽视问题的根源，也找不到解决问题的办法。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是恋人安慰型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。没关系。。。。。。</div>
+		</div>
+		
+		<div class="result" id="p">
+			<img src="http://entel.github.com/blog/img/Tarot/p.jpg" />
+			<div class="result_title">恋人</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常感性、重感情。</div>
+			<div class="result2"><p style="text-indent: 2em;">占卜感情类问题是，它会异常投入，并会与问卜者产生共鸣。但是面临选择是，它往往会犹豫不决，所以此类卜灵并不适合选择类占卜。它感情细腻，害怕孤独，容易情绪化，容易被感动。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是恋人撒娇型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。也不错。。。。。。</div>
+		</div>
+		
+		<div class="result" id="q">
+			<img src="http://entel.github.com/blog/img/Tarot/q.jpg" />
+			<div class="result_title">月亮</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵有些孤僻，常常会凭心情臆断。</div>
+			<div class="result2"><p style="text-indent: 2em;">不擅长交流的一类卜灵。尤其当心情不好的时候，占卜会自说自话，完全不理会问卜者。准确率随心情变化而起伏。对感情，尤其是恋爱类问题敏感，往往会做出意想不到的精确解读。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是子女任性型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。（沉默）</div>
+		</div>
+		
+		<div class="result" id="r">
+			<img src="http://entel.github.com/blog/img/Tarot/r.jpg" />
+			<div class="result_title">女教皇</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵以一双冷眼看世界。</div>
+			<div class="result2"><p style="text-indent: 2em;">它看透了世界的本质。对善与恶、好与坏有自己的看法和标准。它心如止水，无欲无求。它充满智慧，却不去拯救陷入困难之人。因为它主张人需要自救，只有自己才能就得了自己。占卜中，它不会为问卜者提供具体的方法和建议，但它会详细地解析事件的关键因素。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是智者冷漠型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>请仔细想想。。。。。。</div>
+		</div>
+		
+		<div class="result" id="s">
+			<img src="http://entel.github.com/blog/img/Tarot/s.jpg" />
+			<div class="result_title">恶魔</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵不守常规，脱俗新颖。</div>
+			<div class="result2"><p style="text-indent: 2em;">它无拘无束，不受道德束缚，敢于承认个表现自己。它与众不同，常常做出令人膛目结舌的事情。在占卜中，非常善于看透问卜者内心深处的欲望，并依此来指导占卜。它能够知道问卜者想要什么，但那如果是奢望，它也会直白地告诉问卜者，令问卜者遭受打击。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是恶魔解说型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。虚伪。。。。。。</div>
+		</div>
+		
+		<div class="result" id="t">
+			<img src="http://entel.github.com/blog/img/Tarot/t.jpg" />
+			<div class="result_title">死神</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵愤世嫉俗，敢于大破大立。</div>
+			<div class="result2"><p style="text-indent: 2em;">这是一个非常危险的卜灵，因为它对这个世界非常失望、不满，并且想要破坏并改造它。占卜时，它会侧重于解读伤害和隐患等方面，对阴暗的部分非常敏感。对于问卜者来说，听它解读可能会很压抑，却受益匪浅。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是战友悲观型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。可悲。。。。。。</div>
+		</div>
+		
+		<div class="result" id="v">
+			<img src="http://entel.github.com/blog/img/Tarot/v.jpg" />
+			<div class="result_title">未知</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵非常善变，太感性而不适合占卜。</div>
+			<div class="result2"><p style="text-indent: 2em;">这类卜灵没有固定的面貌，让人琢磨不定。同时它又对魔法过于热衷，导致对占卜的忽略，所以拥有这类卜灵的人并不适合做塔罗师。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵一般没有与塔罗师的固定对话模式。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。（无）</div>
+		</div>
+		
+		<div class="result" id="w">
+			<img src="http://entel.github.com/blog/img/Tarot/w.jpg" />
+			<div class="result_title">命运之轮</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是宿命论者，讲究顺其自然。</div>
+			<div class="result2"><p style="text-indent: 2em;">它非常擅长冥想和仪式，对既定的命运有很敏锐的感觉，往往能察觉到别人察觉不到的细节。它的第六感和直觉很强，但是又过于依赖直觉。它一般能为问卜者详细地描绘未来如何如何，却不能给问卜者很好的建议。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是卦师转述型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>缘分如此。。。。。。</div>
+		</div>
+		
+		<div class="result" id="x">
+			<img src="http://entel.github.com/blog/img/Tarot/x.jpg" />
+			<div class="result_title">魔术师</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵具有非常强烈的直觉。</div>
+			<div class="result2"><p style="text-indent: 2em;">它也是依靠灵感占卜的卜灵。不过它充满了新奇的想法，解读往往很生动，令问卜者沉醉。它解读的角度很特别，经常会收到让人意想不到的效果。同时它也有自由散漫的毛病，解读往往不能集中一个主题，以至于占卜结束后问卜者都不知道重点是什么。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式一般是朋友推荐型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>。。。。。。这个不错。。。。。。</div>
+		</div>
+		
+		<div class="result" id="y">
+			<img src="http://entel.github.com/blog/img/Tarot/y.jpg" />
+			<div class="result_title">愚者</div>
+			<div class="result1"><p style="text-indent: 2em;">代表你的卜灵是改进主义者，乐于尝试，用于进取。</div>
+			<div class="result2"><p style="text-indent: 2em;">它总是精力旺盛，充满行动力。它是个急性子，经常还没有仔细思考，便已做决定。它总是追求美好的事物，即使失败了，也从不气馁。占卜时，也许还没有听问卜者讲完详细状况，便开始解读。这类卜灵是疯狂的冒险家。</div>
+			<div class="result3"><p style="text-indent: 2em;">此类卜灵与塔罗师的对话模式同伴盲目型。</div>
+			<div class="keyword"><span class="gjy">关键语：</span>努力一定会有结果。。。。。。</div>
+		</div>
+		
+	</div>
+	</div>
+	
+	<script src="http://entel.github.com/blog/js/question.js"></script>
+	<script src="http://entel.github.com/blog/js/radio.js"></script>

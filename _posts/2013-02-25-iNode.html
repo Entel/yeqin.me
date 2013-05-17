@@ -1,0 +1,17 @@
+---
+layout: article
+title: A problem about iNode_Linux
+---
+<p style="text-indent: 2em">寒假换了个版本的Linux后（以前用的是Fedora，现在换了Ubuntu），没装iNode，回到学校后为了上网装了iNode，但是出现了个问题，./install.sh安装成功后双击没有反应！！！各种上网查啊，在windows跟linux之间各种切换啊。。。折腾来折腾去的，好不容易解决了。。。总结一下吧。。。</p>
+<p style="text-indent: 2em">1.运行$:./iNodeClient，查看是否缺少什么文件（忘了截图了，好像说是什么cannot found）
+<p style="text-indent: 2em">首先是缺少libjpeg.so.62,输入命令行(在本地搜索这些库):
+	$:locate libjpeg
+<p style="text-indent: 2em">发现存在于/usr/lib/i386-linux-gun/这个目录里存在libjpeg库的其他版本libjpeg.so.8,可能存在其他的版本，根据每个人电脑的不同版本不同，但关键字应该是一样的。</p>
+<p style="text-indent: 2em">2.建立软链接，输入命令行:</p>
+	$:ln -s /usr/lib/i386-linux-gun/libjpeg.so.8 /usr/lib/i386-linux-gun/libjpeg.so.62
+<p style="text-indent: 2em">3.再次运行$:./iNodeClient后发现缺少另一个文件libtiff.so.3，同样用上面的方法，先是运行命令行:</p>
+	$:locate libtiff
+<p style="text-indent: 2em">发现类似的版本/usr/lib/i386-linux-gun/libtiff.so.5</p>
+<p style="text-indent: 2em">建立软链接:</p>
+	$:ln -s /usr/lib/i386-linux-gnu/libtiff.so.5 /usr/lib/i386-linux-gnu/libtiff.so.3
+<p style="text-indent: 2em">4.然后再次使用命令行$:./iNodeClient，就会弹出iNodeClient的窗口了，如果你的电脑仍显示缺少什么的话可以继续用上面的方法喔。^_^</p>

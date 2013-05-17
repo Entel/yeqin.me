@@ -1,0 +1,120 @@
+body{
+	background-color:#EAEAEA;
+	font-family:"proxima-nova-1", "proxima-nova-2", Helvetica, Arial, sans-serif;
+}
+
+#main{
+	margin-top:8%;
+	margin-left:12%;
+	margin-right:12%;
+	
+}
+
+h2{
+	margin-top:5%;
+	font-family:"proxima-nova-1", "proxima-nova-2", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 1;
+}	
+
+h2>a{
+	color:#A9A9A9;
+	-moz-color: #A9A9A9;
+	-webkit-color: #A9A9A9;
+	-o-color: #A9A9A9;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+h2>a:hover{
+	color: #525252;
+	-moz-color: #525252;
+	-webkit-color: #525252;
+	-o-color: #525252;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+#tr{
+	margin-top:5%;
+	font-family:"proxima-nova-1", "proxima-nova-2", Helvetica, Arial, sans-serif;
+	text-align:center;
+	line-height: 2;
+	font-size: 26px;
+	color:#8F8F8F;
+}
+
+#sp{
+	font-weight:bold;
+	color:#8B8682;
+}
+
+.title{
+	color:#6A5ACD;
+	-moz-color: #A9A9A9;
+	-webkit-color: #A9A9A9;
+	-o-color: #A9A9A9;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+.title:hover{
+	color: #66CD00;
+	-moz-color: #525252;
+	-webkit-color: #525252;
+	-o-color: #525252;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+.date{
+	color:#8B8B83;
+	font-size:14px;
+}
+
+#menu{
+	margin-top:6%;
+	text-align:center;
+	
+}
+
+
+img{
+	margin-left:14px;
+	height:28px;
+	-moz-opacity:0.5;
+	-webkit-opacity: 0.5;
+	-o-opacity:0.5;
+	opacity: 0.5;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+img:hover {
+	-moz-opacity: 0.9;
+	-webkit-opacity: 0.9;
+	-o-opacity: 0.9;
+	opacity: 0.9;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+ul {
+	list-style:none;
+}
+
+#tmp_menu{
+	text-align:center;
+}
