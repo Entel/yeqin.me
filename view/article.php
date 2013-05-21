@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="../css/article.css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 	<script language="javascript" type="text/javascript" src="../js/ram_color.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/jquery.js"></script>
 	<link type="text/css" rel="stylesheet" href="../js/syntaxhighlighter/styles/shCore.css"/>
 	<link type="text/css" rel="stylesheet" href="../js/syntaxhighlighter/styles/shCore.css"/>
 	<link type="text/css" rel="stylesheet" href="../js/syntaxhighlighter/styles/shThemeDefault.css" id="shTheme"/>
@@ -29,7 +29,7 @@
 		
 		setcookie('a_id', $a_id, time() + (86400),"/");
 		
-		$result = mysqli_query($dbc, 'SELECT * FROM article WHERE a_id = "' . $_COOKIE['a_id'] . '"');
+		$result = mysqli_query($dbc, 'SELECT * FROM article WHERE a_id = "' . $a_id . '"');
 		$row = mysqli_fetch_array($result) or die ( "error".mysql_error);
 		$commit_result = mysqli_query($dbc, 'SELECT * FROM article_commit WHERE a_id = "' . $a_id . '"');
 	?>
@@ -37,20 +37,7 @@
 </head>
 <body>
 	<div id="main">
-<!--	<div id="top">
-		<h4>Category</h4>
-		<ul id="diary_type">
-		    {% for category in site.categories %}
-			<li><a href="/categories/{{ category | first }}/" title="view all6posts">{{ category | first }} ({{ category | last | size }})</a>
-		    	</li>
-		    {% endfor %}
-		</ul>
-		<ul id="diarys" >
-		　　{% for post in site.posts %}
-		　　　　<li id="diary" >{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-		　　{% endfor %}
-		</ul>
-	</div>	-->
+
 		<div id="show">	
 			<h2><a href="ini.php">This is me !!!</a>
 				<font color="#778899" size="33"><strong>>></strong></font>
@@ -58,7 +45,7 @@
 			</h2>
 			<h3><?=$row["title"]?></h3>
 			<div id="date"><?=$row["date"]?></div>
-			<div id="article"><?=$row["article"]?></div>
+			<div id="text"><?=$row["article"]?></div>
 		</div>
 		
 		</br></br></br>
@@ -91,6 +78,8 @@
 				<button id="submit">Submit</button>
 			</fieldset>
 		</div>
+		
+		<br /><br /><br />
 
 		<div id="tmp_menu">
 			<br />
@@ -98,11 +87,44 @@
 			呀，实在不好意思。。。这个功能出了点问题。。。我正在努力调试中。。。<br />
 		</div>
 	
-		<div id="menu">
-			<a  class="menuli"><img src="../img/page.ico" class="menu_list" /></a>
-			<a  class="menuli"><img src="../img/photos.ico" class="menu_list" /></a>
-			<a  class="menuli"><img src="../img/newspaper.ico" class="menu_list" /></a>
+		<div id="article_sho">
+			<br />
+			<?php
+				$article_result = mysqli_query($dbc, "
+				SELECT *
+				FROM article A
+				WHERE A.a_id=(SELECT MAX(A2.a_id)
+							FROM article A2)");
+				$article_row = mysqli_fetch_array($article_result);
+				echo '<div>The lastest post: <a href="article.php?a_id='.$article_row['a_id'].'">'.$article_row['title'].'</a></div>';
+				echo '<div><a href="#">All artitles ...</a></div>';
+			?>
 		</div>
+	
+		<div id="player">
+		<br />
+			<audio controls="controls" loop="loop">
+			<?php
+				$music_result = mysqli_query($dbc, "SELECT * FROM music");
+				while ($music_row = mysqli_fetch_array($music_result))
+				{
+					echo '<img src="'.$music_row['img'].'" />';
+					echo $music_row['title'];
+					echo '<source src="'.$music_row['path'].'" type="audio/mpeg" >';
+				}
+			?>
+			</audio>
+		</div>
+
+
+		<div id="menu">
+			<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
+			<a class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
+			<a href="#" class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
+			<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
+			<a  class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
+		</div>
+	
 	</div>
 	<br /><br /><br /><br />
 </body>

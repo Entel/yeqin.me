@@ -80,7 +80,7 @@ h3{
 	color:blue:	
 }
 
-#article{
+#text{
 	margin-left:4%;
 	margin-top:4%;
 	margin-right:10%;
@@ -239,41 +239,7 @@ button:active {
 	max-width:95%;
 }*/
 
-#menu{
-	margin-top:6%;
-	text-align:center;
-	
-}
-
-.menu_list{
-	margin-left:14px;
-	height:28px;
-	-moz-opacity:0.5;
-	-webkit-opacity: 0.5;
-	-o-opacity:0.5;
-	opacity: 0.5;
-	-moz-transition: all .7s ease-in;
-	-webkit-transition: all .7s ease-in;
-	-o-transition: all .7s ease-in;
-	transition: all .7s ease-in;
-}
-
-.menu_list:hover {
-	-moz-opacity: 0.9;
-	-webkit-opacity: 0.9;
-	-o-opacity: 0.9;
-	opacity: 0.9;
-	-moz-transition: all .7s ease-in;
-	-webkit-transition: all .7s ease-in;
-	-o-transition: all .7s ease-in;
-	transition: all .7s ease-in;
-}
-
-ul {
-	list-style:none;
-}
-
-p>a{
+/*p>a{
 	color:#EE7600;
 	-moz-color: #EE7600;
 	-webkit-color: #EE7600;
@@ -293,8 +259,83 @@ p>a:hover{
 	-webkit-transition: all .5s ease-in;
 	-o-transition: all .5s ease-in;
 	transition: all .5s ease-in;
+}*/
+
+#menu{
+	margin-top:6%;
+	text-align:center;
+	
+}
+
+
+img{
+	cursor: pointer;
+	margin-left:14px;
+	height:28px;
+	-moz-opacity:0.5;
+	-webkit-opacity: 0.5;
+	-o-opacity:0.5;
+	opacity: 0.5;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+img:hover {
+	cursor: pointer;
+	-moz-opacity: 0.9;
+	-webkit-opacity: 0.9;
+	-o-opacity: 0.9;
+	opacity: 0.9;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+ul {
+	list-style:none;
 }
 
 #tmp_menu{
 	text-align:center;
+}
+
+#article_sho{
+	text-align:center;
+	font-size: 18px;
+	color:#8F8F8F;
+}
+
+#message_sho{
+	text-align:center;
+	font-size: 18px;
+	color:#8F8F8F;
+}
+
+#player, #article_sho{
+	text-align:center;
+}
+
+a{
+	color:#EE7600;
+	-moz-color: #EE7600;
+	-webkit-color: #EE7600;
+	-o-color: #EE7600;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+a:hover{
+	color:#7A67EE;
+	-moz-color: #7A67EE;
+	-webkit-color: #7A67EE;
+	-o-color: #7A67EE;
+	-moz-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
 }

@@ -5,14 +5,13 @@ body{
 
 #main{
 	margin-top:8%;
-	margin-left:12%;
-	margin-right:12%;
 	
 }
 
 h2{
+	margin-right:12%;
+	margin-left:12%;
 	margin-top:5%;
-	font-family:"proxima-nova-1", "proxima-nova-2", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 48px;
 	line-height: 1;
@@ -40,18 +39,24 @@ h2>a:hover{
 	transition: all .5s ease-in;
 }
 
-#tr{
-	margin-top:5%;
-	font-family:"proxima-nova-1", "proxima-nova-2", Helvetica, Arial, sans-serif;
-	text-align:center;
-	line-height: 2;
-	font-size: 26px;
-	color:#8F8F8F;
+#ch_pi{
 }
 
-#sp{
+pre{
+	width: 75%;
+	margin-top:5%;
+	font-size: 22px;
+	color:#8F8F8F;
+	line-height: 2;
+}
+
+.sp{
 	font-weight:bold;
 	color:#8B8682;
+}
+
+p{
+	text-indent: 2em;
 }
 
 .title{
@@ -83,6 +88,7 @@ h2>a:hover{
 #menu{
 	margin-top:6%;
 	text-align:center;
+	
 }
 
 
@@ -121,14 +127,14 @@ ul {
 }
 
 #article_sho{
-	text-align:center;
+	text-align: center;
 	font-size: 18px;
 	color:#8F8F8F;
 }
 
 #lam{
-	margin-left: 10%;
-	width:80%;
+	width: 60%;
+	margin-left: 20%;
 }
 
 #lm{

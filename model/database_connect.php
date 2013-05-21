@@ -3,6 +3,6 @@
 	$dbc = mysqli_connect('localhost','root','12341234','yeqin')
 		or die('Error connecting to MySQL serves');
 	mysql_query("SET NAMES 'utf8'");
-        mysql_query("set character set 'utf8'");
-        mysql_set_charset('utf8');
+    mysql_query("set character set 'utf8'");
+    mysql_set_charset('utf8');
 ?>
