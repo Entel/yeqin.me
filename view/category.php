@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../css/profile.css" />
-	<script type="text/javascript" src="../js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/category.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style>
 	a:link {text-decoration: none;}
@@ -13,43 +13,34 @@
 	<?php
 		include '../model/database_connect.php';
 	?>
-	<title> This is me!!!——About me</title>
+	<title> This is me !!!</title>
 </head>
 
 <body>
 <div id="main">
 	<h2><a href="ini.php">This is me!!!</a></h2>
 	
-<!--	<div id="tr">
-		<div id="sp">Hello.</div>My name is Entel Science.<br />
-		 I am a student of Sun Yat-san University, school<br />
-		 of software. Welcome to my<br /> blog. 	
-	</div>-->
-	
-	<div id="pic">
-		<img src="" />
-	</div>
-	
-	<div id="ch_pi">
-			<pre>
-			  呀，大家好，我是<span class="sp">束负左月</span>
-			  原名<span class="sp">郑业勤</span>
-			  90后，95前，<span class="sp">平安夜</span>出生的哦。。。
-			  广东<span class="sp">汕头人</span>
-			  固有属性是<span class="sp">冰</span>，又被称作。。。<span class="sp">冷血</span>。。。
-			  呢称好多，叶子，月，Enty 。。。
-			  座右铭：<span class="sp">我要努力实现梦想，以弥补小时候吹过的牛。</span>
-			  极其讨厌吸烟，十分讨厌喝酒。。。
-			  热爱<span class="sp">技术</span>，喜欢<span class="sp">二次元</span>。。。
-			  <span class="sp">中山魔法大学软件学院的一只小程序猿</span>。。。
-			  传说中的，<span class="sp">打得了代码，入得了厨房</span>。。。
-			  <span class="sp">外表善良，内在邪恶</span>。。。
-			  综上所诉，我还是个很不错的人的，嗯嗯！！！
-			  哦，对了，还有联系方式。。。
-			  <span class="sp">我的QQ是 499601435
-			  E-mail address : entel.science@gmail.com</span>
-			  如果有什么意见建议的话别忘了给我留言哦！！！
-			 </pre>
+	<div id="categories">
+	<?php
+		$category_result = mysqli_query($dbc, "SELECT DISTINCT(A.type) FROM article A");
+		while ($category_row = mysqli_fetch_array($category_result))
+		{
+			echo '<div class="index">
+			<div class="c1">'.$category_row['type'].'</div>';
+			$category_result2 = mysqli_query($dbc, "SELECT * FROM article A WHERE type='".$category_row['type']."'");
+			while ($category_row2 = mysqli_fetch_array($category_result2))
+			{
+				echo '
+					<div class="category" style="text-indent: 2em">
+					<a href="article.php?a_id='.$category_row2['a_id'].'" target="_blank">'
+						.$category_row2['title'].'
+					</a>
+						<span class="date">'.$category_row2['date'].'</span>
+					</div>';
+			}
+			echo '</div>';
+		}
+	?>
 	</div>
 	
 <!--	<div id="tmp_menu">
@@ -67,13 +58,13 @@
 			WHERE A.a_id=(SELECT MAX(A2.a_id)
 							FROM article A2)");
 			$article_row = mysqli_fetch_array($article_result);
-			echo '<div>The last post: <a href="article.php?a_id='.$article_row['a_id'].'" target="_blank">'.$article_row['title'].'</a></div>';
+			echo '<div>The lastest post: <a href="article.php?a_id='.$article_row['a_id'].'" target="_blank">'.$article_row['title'].'</a></div>';
 			echo '<div><a href="category.php">All artitles ...</a></div>';
 		?>
 	</div>
 	
 	<div id="lam">
-		<br />
+		<br /><br /><br />
 		<div id="lm">
 		<?php
 			$message_result = mysqli_query($dbc, "
@@ -87,6 +78,7 @@
 			echo '<div><a href="message.php">All messages ...</a></div>';
 		?>
 		</div>
+		<br />
 		<form id="lam_box" method="post" action="../controller/tmp_message.php">
 			<fieldset >
 				<legend>Leave a message</legend>
@@ -100,7 +92,7 @@
 	
 	<div id="player">
 		<br />
-		<audio controls="controls" loop="loop">
+		<audio controls="controls"  loop="loop">
 		<?php
 			$music_result = mysqli_query($dbc, "SELECT * FROM music");
 			while ($music_row = mysqli_fetch_array($music_result))
@@ -115,16 +107,16 @@
 
 
 	<div id="menu">
-		<a  class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
-		<a class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
+		<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
+		<a href="#" class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
 		<a class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
-		<a class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
+		<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
 		<a class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
 	</div>
 	<br /><br /><br /><br />
 </div>
 
-	<script language="javascript" type="text/javascript" src="../js/category.js"></script>
 	<script language="javascript" type="text/javascript" src="../js/tmp_menu.js"></script>
+	
 </body>
 </html>

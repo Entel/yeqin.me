@@ -50,11 +50,11 @@
 			</fieldset>
 		</form>
 	
-		<div id="tmp_menu">
+<!--		<div id="tmp_menu">
 			<br />
 			Yah, sorry, there is some problems occur to this function.<br />
 			呀，实在不好意思。。。这个功能出了点问题。。。我正在努力调试中。。。<br />
-		</div>
+		</div>-->
 	
 		<div id="article_sho">
 			<br />
@@ -66,7 +66,7 @@
 								FROM article A2)");
 				$article_row = mysqli_fetch_array($article_result);
 				echo '<div>The lastest post: <a href="article.php?a_id='.$article_row['a_id'].'" target="_blank">'.$article_row['title'].'</a></div>';
-				echo '<div><a href="#">All artitles ...</a></div>';
+				echo '<div><a href="category.php">All artitles ...</a></div>';
 			?>
 		</div>
 	

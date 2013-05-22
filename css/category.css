@@ -45,54 +45,29 @@ h3{
 	font-size:35px;
 }
 
-#date{
-	margin-left:7%;
-	font-size:14px;
-	color:#ADD8E6;
-	-moz-color: #ADD8E6;
-	-webkit-color: #ADD8E6;
-	-o-color: #ADDE86;
-	-moz-transition: all .5s ease-in;
-	-webkit-transition: all .5s ease-in;
-	-o-transition: all .5s ease-in;
-	transition: all .5s ease-in;
-}
-
-#date:hover{
-	color: #76EE00;
-	-moz-color: #76EE00;
-	-webkit-color: #76EE00;
-	-o-color: #76EE00;
-	-moz-transition: all .5s ease-in;
-	-webkit-transition: all .5s ease-in;
-	-o-transition: all .5s ease-in;
-	transition: all .5s ease-in;
-}
-
-#text{
-	margin-left:4%;
-	margin-top:4%;
-	margin-right:10%;
-	color:#515151;
-	font-size:20px;
-}	
-
-#comments{
+#categories{
 	width: 78%;
 	margin-left:6%;
 	color:#515151;
+	line-height: 1.5;
 }
 
-.un{	
-	color:#515151;
-	font-size:20px;
+.index{
+	line-height: 2;
 }
 
+.c1{
+	color:#8B7B8B;
+	font-size:35px;
+}
 
+.category{	
+	font-size:26px;
+}
 
 .date{
 	float: right;
-	font-size: 17px;
+	font-size: 22px;
 	color:#ADD8E6;
 	-moz-color: #ADD8E6;
 	-webkit-color: #ADD8E6;
