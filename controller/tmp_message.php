@@ -13,6 +13,6 @@
 				VALUES 
 				('".$username."', '".$email."', '".$message."', '".date('Y-m-d H:i:s')."','".$_SERVER['REMOTE_ADDR']."')");
 	
-	header("location:../view/message.php);
+	header("location:../view/message.php");
 	
 ?>

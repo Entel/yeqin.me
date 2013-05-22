@@ -84,7 +84,7 @@
 			$message_row = mysqli_fetch_array($message_result);
 			echo '<div id="mun">'.$message_row['username'].':<br /></div>
 			<div id="mm">'.$message_row['message'].'</div>';
-			echo '<div><a href="#">All messages ...</a></div>';
+			echo '<div><a href="message.php">All messages ...</a></div>';
 		?>
 		</div>
 		<form id="lam_box" method="post" action="../controller/tmp_message.php">

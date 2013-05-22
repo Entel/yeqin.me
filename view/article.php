@@ -31,7 +31,7 @@
 		
 		$result = mysqli_query($dbc, 'SELECT * FROM article WHERE a_id = "' . $a_id . '"');
 		$row = mysqli_fetch_array($result) or die ( "error".mysql_error);
-		$commit_result = mysqli_query($dbc, 'SELECT * FROM article_commit WHERE a_id = "' . $a_id . '"');
+		$comment_result = mysqli_query($dbc, 'SELECT * FROM article_comment WHERE a_id = "' . $a_id . '"');
 	?>
 	<title><?=$row["title"]?></title>
 </head>
@@ -50,31 +50,31 @@
 		
 		</br></br></br>
 		
-		<h3>Commit</h3>
-		<div id="commits">
+		<h3>Comment</h3>
+		<div id="comments">
 			<?php
-				while (	$row = mysqli_fetch_array($commit_result))
+				while (	$comment_row = mysqli_fetch_array($comment_result))
 				{
-					echo '
-					<div class="commit">
+					echo '<br />
+					<div class="comment">
 						<div class="un">'
-							.$row['username'].'('.$row['email'].') :
-							<span class="date"> '.$row['date'].'</span>
+							.$comment_row['username'].'('.$comment_row['email'].') :
+							<span class="date"> '.$comment_row['date'].'</span>
 						</div>
 						<div class="com" style="text-indent: 2em">'
-							.$row['commit'].
-						'</div></br>
+							.$comment_row['commit'].
+						'</div></br><hr >
 					</div>';
 				}
 			?>
 		</div>
 		
-		<form id="lac" method="post" action="../controller/tmp_commit.php">
+		<form id="lac" method="post" action="../controller/tmp_comment.php">
 			<fieldset >
-				<legend>Leave a commit</legend>
+				<legend>Leave a comment</legend>
 				<span class="lc">Username:</span><input type="text" name="username" /></br>
 				<span class="lc">E-mail:</span><input type="text" name="email" /></br>
-				<span class="lc">Commit:</span><textarea name="commit" rows="4" cols="70" ></textarea></br></br>
+				<span class="lc">Comment:</span><textarea name="commit" rows="4" cols="70" ></textarea></br></br>
 				<button id="submit">Submit</button>
 			</fieldset>
 		</div>
@@ -120,7 +120,7 @@
 		<div id="menu">
 			<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
 			<a class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
-			<a href="#" class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
+			<a href="message.php" class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
 			<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
 			<a  class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
 		</div>
