@@ -75,7 +75,7 @@
 	
 	<div id="player">
 		<br />
-		<audio controls="controls" loop="loop">
+		<audio controls="controls" autoplay="autoplay" loop="loop">
 		<?php
 			$music_result = mysqli_query($dbc, "SELECT * FROM music");
 			while ($music_row = mysqli_fetch_array($music_result))
