@@ -19,11 +19,9 @@
 <body>
 <div id="main">
 	<h2><a href="ini.php">This is me!!!</a></h2>
-	
+
 	<div id="tr">
-		<div id="sp">Hello.</div>My name is Entel Science.<br />
-		 I am a student of Sun Yat-san University, school<br />
-		 of software. Welcome to my<br /> blog. 	
+		呀，不好意思，这里什么都没有。。。
 	</div>
 	
 <!--	<div id="tmp_menu">
@@ -107,5 +105,6 @@
 
 	<script language="javascript" type="text/javascript" src="../js/tmp_menu.js"></script>
 	<script language="javascript" type="text/javascript" src="../js/message_submit.js"></script>
+	
 </body>
 </html>

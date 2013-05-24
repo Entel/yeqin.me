@@ -29,7 +29,12 @@
 				echo '<br/>
 				<div id="message">
 					<div class="mun">'
-						.$message_row['username'].'('.$message_row['email'].') :
+						.$message_row['username'];
+						if ($message_row['email']!=null)
+						{
+							echo '('.$message_row['email'].')';
+						}
+						echo ' :
 						<span class="date"> '.$message_row['date'].'</span>
 					</div>
 					<div class="mm" style="text-indent: 2em">'
@@ -43,9 +48,9 @@
 		<form id="lam_box" method="post" action="../controller/tmp_message.php">
 			<fieldset >
 				<legend>Leave a message</legend>
-				<span class="lc">Username:</span><input type="text" name="username" /></br>
+				<span class="lc">Username:</span><input id="username" type="text" name="username" /></br>
 				<span class="lc">E-mail:</span><input type="text" name="email" /></br>
-				<span class="lc">Message:</span><textarea name="message" rows="4" cols="70" ></textarea></br></br>
+				<span class="lc">Message:</span><textarea id="l_message" name="message" rows="4" cols="70" ></textarea></br></br>
 				<button id="submit">Submit</button>
 			</fieldset>
 		</form>
@@ -88,7 +93,7 @@
 
 		<div id="menu">
 			<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
-			<a href="#" class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
+			<a href="album.php" class="menuli" id="album"><span title="Album"><img src="../img/photos.ico" class="menu_list" /></span></a>
 			<a href="message.php" class="menuli"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
 			<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
 			<a class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
@@ -97,6 +102,7 @@
 	</div>
 
 	<script language="javascript" type="text/javascript" src="../js/tmp_menu.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/message_submit.js"></script>
 	
 </body>
 </html>

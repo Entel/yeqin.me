@@ -2,27 +2,27 @@
 layout: article
 title: GAE
 ---
-<p style="text-indent: 2em">GAE换新版之后一直没有更新所以一直没法翻墙，今天去<a href="https://code.google.com/p/goagent/">goagent</a>看了一下，发现竟然已经更新到<a href="https://nodeload.github.com/goagent/goagent/legacy.zip/2.0">2.1.13</a>版本了，试了一下，可以上翻墙了。。。久违的YouTube,我回来了。。。回到原题，话说，好东西就要大家一起分享，所以吧翻墙的教程放出来吧。。。由于我是Linux用户，所以这次windows的图片只能从别人那里拿来咯，请多见谅啊。。。Linux的翻墙方法也差不多，下次我截一下图，重新发一篇。。。</p>
-<p style="text-indent: 2em">翻墙前的准备，浏览器是<a href="https://www.google.com/intl/en/chrome/browser"/>google chrome</a>(其他浏览器没试过，据说firefox也可以)，还有chrome的插件<a href="http://switchy.samabox.com/">Proxy Switchy</a></p>
-<p style="text-indent: 2em">首先给chrome安装好插件后，导入配置信息（点<a href="http://vdisk.weibo.com/s/h0TnQ/1351754826">这里</a>下载），然后保存。把Chrome的SwitchySharp设置为自动切换模式。</p>
-<img src="http://entel.github.com/blog/img/peizhi.jpg" />
-<img src="http://entel.github.com/blog/img/888888.jpg" />
+<p style="text-indent: 2em">GAE换新版之后一直没有更新所以一直没法翻墙，今天去<a href="https://code.google.com/p/goagent/"  target="_blank">goagent</a>看了一下，发现竟然已经更新到<a href="https://nodeload.github.com/goagent/goagent/legacy.zip/2.0"  target="_blank">2.1.13</a>版本了，试了一下，可以上翻墙了。。。久违的YouTube,我回来了。。。回到原题，话说，好东西就要大家一起分享，所以吧翻墙的教程放出来吧。。。由于我是Linux用户，所以这次windows的图片只能从别人那里拿来咯，请多见谅啊。。。Linux的翻墙方法也差不多，下次我截一下图，重新发一篇。。。</p>
+<p style="text-indent: 2em">翻墙前的准备，浏览器是<a href="https://www.google.com/intl/en/chrome/browser"  target="_blank"/>google chrome</a>(其他浏览器没试过，据说firefox也可以)，还有chrome的插件<a href="http://switchy.samabox.com/  target="_blank"">Proxy Switchy</a></p>
+<p style="text-indent: 2em">首先给chrome安装好插件后，导入配置信息（点<a href="http://vdisk.weibo.com/s/h0TnQ/1351754826"  target="_blank">这里</a>下载），然后保存。把Chrome的SwitchySharp设置为自动切换模式。</p>
+<img src="../img/peizhi.jpg" />
+<img src="../img/888888.jpg" />
 <p style="text-indent: 2em">接下来，需要用到gmail的邮箱，没有的话就申请一个吧，挺有用的其实。</p>
 <p style="text-indent: 2em">注册了邮箱后，登陆Google App Engine，这个过程需要用到你的手机号码接收验证代码。</p>
-<img src="http://entel.github.com/blog/img/appangine.jpg" />
-<img src="http://entel.github.com/blog/img/yanzheng.jpg" />
+<img src="../img/appangine.jpg" />
+<img src="../img/yanzheng.jpg" />
 <p style="text-indent: 2em">申请“appid”,因为嫌麻烦，我全部都填写了同样的名字。</p>
-<img src="http://entel.github.com/blog/img/creat.jpg" />
-<img src="http://entel.github.com/blog/img/appid.jpg" />
+<img src="../img/creat.jpg" />
+<img src="../img/appid.jpg" />
 <p style="text-indent: 2em">这图的主人比较强，申请了这么多appid。。。我就一个，从一年前用到现在。。。</p>
-<img src="http://entel.github.com/blog/img/10ge.jpg" />
+<img src="../img/10ge.jpg" />
 <p style="text-indent: 2em">接下来打开GoAgent目录，找到\local\proxy.ini文件，将[gae]下的appid后面的名字替换成你所申请到的“appid”。如果你申请了多个，请用“|”分开，如图所示。</p>
-<img src="http://entel.github.com/blog/img/xiugaiidhou.jpg" />
+<img src="../img/xiugaiidhou.jpg" />
 <p style="text-indent: 2em">打开目录下\server\upload.bat文件，分别按照提示输入“appid”、Gmail邮箱和密码。如果有多个“appid”可以“|”分开。</p>
-<img src="http://entel.github.com/blog/img/upload3.jpg" />
-<img src="http://entel.github.com/blog/img/sucess.jpg" />
+<img src="../img/upload3.jpg" />
+<img src="../img/sucess.jpg" />
 <p style="text-indent: 2em">最后一步，找到\server\python\app.yaml，把所有“appid”填写到application栏目下，用“|”间隔开。</p>
-<img src="http://entel.github.com/blog/img/last.jpg" />
+<img src="../img/last.jpg" />
 <p style="text-indent: 2em">完成以上步骤后，双击local文件夹里的gogent.exe，(*^__^*) 嘻嘻……欢迎来到真实的世界。。。facebook、youtube神马的都可以上啦。。。</p>
 <p style="text-indent: 2em">对了，还有一个，开机自动启动，local文件夹里面有两个叫addto-startup的文件，一个是.py的，应该是在Linux用的，还有一个是.vbs，如果我没记错的话，应该是windows下的脚本文件来的，双击之应该可以把它添加到开机自动启动里面，这样就不用每次开机都去双击gogent.exe了。。。
 </p>

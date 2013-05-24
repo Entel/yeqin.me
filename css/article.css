@@ -231,7 +231,7 @@ button:active {
 	
 }
 
-img{
+#menu img{
 	cursor: pointer;
 	margin-left:14px;
 	height:28px;
@@ -245,7 +245,7 @@ img{
 	transition: all .5s ease-in;
 }
 
-img:hover {
+#menu img:hover {
 	cursor: pointer;
 	-moz-opacity: 0.9;
 	-webkit-opacity: 0.9;

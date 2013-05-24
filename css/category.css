@@ -66,8 +66,8 @@ h3{
 }
 
 .date{
-	float: right;
-	font-size: 22px;
+	/*float: right;*/
+	font-size: 20px;
 	color:#ADD8E6;
 	-moz-color: #ADD8E6;
 	-webkit-color: #ADD8E6;
@@ -257,7 +257,7 @@ ul {
 }
 
 a{
-	color:#EE7600;
+	color:#7A67EE;
 	-moz-color: #EE7600;
 	-webkit-color: #EE7600;
 	-o-color: #EE7600;
@@ -268,7 +268,7 @@ a{
 }
 
 a:hover{
-	color:#7A67EE;
+	color:#EE7600;
 	-moz-color: #7A67EE;
 	-webkit-color: #7A67EE;
 	-o-color: #7A67EE;

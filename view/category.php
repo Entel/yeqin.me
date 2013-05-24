@@ -35,7 +35,7 @@
 					<a href="article.php?a_id='.$category_row2['a_id'].'" target="_blank">'
 						.$category_row2['title'].'
 					</a>
-						<span class="date">'.$category_row2['date'].'</span>
+						<div class="date">'.$category_row2['date'].'</div>
 					</div>';
 			}
 			echo '</div>';
@@ -63,7 +63,7 @@
 		?>
 	</div>
 	
-	<div id="lam">
+<!--	<div id="lam">
 		<br /><br /><br />
 		<div id="lm">
 		<?php
@@ -73,7 +73,12 @@
 			WHERE A.m_id=(SELECT MAX(A2.m_id)
 							FROM message A2)");
 			$message_row = mysqli_fetch_array($message_result);
-			echo '<div id="mun">'.$message_row['username'].':<br /></div>
+			echo '<div id="mun">'.$message_row['username'];
+			if ($message_row['email']!=null)
+			{
+				echo '('.$message_row['email'].')';
+			}
+			echo ':<br /></div>
 			<div id="mm">'.$message_row['message'].'</div>';
 			echo '<div><a href="message.php">All messages ...</a></div>';
 		?>
@@ -87,7 +92,7 @@
 				<span class="lc">Message:</span><textarea name="message" rows="4" cols="70" ></textarea></br></br>
 				<button id="submit">Submit</button>
 			</fieldset>
-		</div>
+		</div>-->
 	</div>
 	
 	<div id="player">
@@ -108,8 +113,8 @@
 
 	<div id="menu">
 		<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
-		<a href="#" class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
-		<a class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
+		<a href="album.php" class="menuli" id="album"><span title="Album"><img src="../img/photos.ico" class="menu_list" /></span></a>
+		<a href="message.php" class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
 		<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
 		<a class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
 	</div>

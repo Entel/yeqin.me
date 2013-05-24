@@ -1,0 +1,12 @@
+RewriteEngine on 
+#假设527883.com是你的主域名 
+RewriteCond %{HTTP_HOST} ^www.yeqin.me$ 
+# 将 wordpress改成你主域名所对应的文件夹名 
+RewriteCond %{REQUEST_URI} !^/
+# 下面两行不需要改变 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+# 将 wordpress改成你主域名所对应的文件夹名 
+RewriteRule ^(.*)$ /$1 
+RewriteCond %{HTTP_HOST} ^www.yeqin.me$ 
+RewriteRule ^(public_html/)?$ index.html [L] 

@@ -62,7 +62,7 @@
 							<span class="date"> '.$comment_row['date'].'</span>
 						</div>
 						<div class="com" style="text-indent: 2em">'
-							.$comment_row['commit'].
+							.$comment_row['comment'].
 						'</div></br><hr >
 					</div>';
 				}
@@ -72,9 +72,9 @@
 		<form id="lac" method="post" action="../controller/tmp_comment.php">
 			<fieldset >
 				<legend>Leave a comment</legend>
-				<span class="lc">Username:</span><input type="text" name="username" /></br>
+				<span class="lc">Username:</span><input id="username" type="text" name="username" /></br>
 				<span class="lc">E-mail:</span><input type="text" name="email" /></br>
-				<span class="lc">Comment:</span><textarea name="commit" rows="4" cols="70" ></textarea></br></br>
+				<span class="lc">Comment:</span><textarea id="l_comment" name="l_comment" rows="4" cols="70" ></textarea></br></br>
 				<button id="submit">Submit</button>
 			</fieldset>
 		</div>
@@ -119,7 +119,7 @@
 
 		<div id="menu">
 			<a class="menuli" id="article"><span title="Article"><img src="../img/page.ico" class="menu_list" /></span></a>
-			<a class="menuli" id="picture"><span title="Picture"><img src="../img/photos.ico" class="menu_list" /></span></a>
+			<a href="album.php" class="menuli" id="album"><span title="Album"><img src="../img/photos.ico" class="menu_list" /></span></a>
 			<a href="message.php" class="menuli" id="message"><span title="Leave a message"><img src="../img/message.ico" class="menu_list" /></span></a>
 			<a href="profile.php" class="menuli" id="about_me"><span title="About Me"><img src="../img/newspaper.ico" class="menu_list" /></span></a>
 			<a  class="menuli" id="music"><span title="Music Player"><img src="../img/eject.ico" class="menu_list" /></span></a>
@@ -129,4 +129,5 @@
 	<br /><br /><br /><br />
 </body>
 	<script language="javascript" type="text/javascript" src="../js/tmp_menu.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/comment_submit.js"></script>
 </html>

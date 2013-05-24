@@ -4,7 +4,7 @@
 	
 	$username = $_POST['username'];
 	$email = $_POST['email'];
-	$commemt = $_POST['comment'];
+	$comment = $_POST['l_comment'];
 	
 	echo $_COOKIE['a_id'].$username.$email.$comment;
 	
