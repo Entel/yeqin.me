@@ -58,7 +58,12 @@
 					echo '<br />
 					<div class="comment">
 						<div class="un">'
-							.$comment_row['username'].'('.$comment_row['email'].') :
+							.$comment_row['username'];
+							if ($comment_row['email']!=null)
+							{
+								echo '('.$comment_row['email'].')';
+							}
+							echo ' :
 							<span class="date"> '.$comment_row['date'].'</span>
 						</div>
 						<div class="com" style="text-indent: 2em">'
